@@ -1,27 +1,27 @@
 {
-    "name": "swisstheme-sarl/sixpayment",
-    "description": "Six payment solution bundle",
-    "type": "symfony-bundle",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Damien Reb",
-            "email": "damien@backndev.fr"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-      "php": ">= 7.2",
-        "ext-json": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "backndev\\sixpayment\\": ""
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
+  "name": "swisstheme-sarl/sixpayment",
+  "description": "Six payment solution bundle",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Richard blatt",
+      "email": "richardblat@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">= 7.2",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "SwissthemeSarl\\sixpayment\\": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
 }

@@ -1,3 +1,0 @@
-paypal:
-  arguments: ['@security']
-  public: true

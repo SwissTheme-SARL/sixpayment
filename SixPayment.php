@@ -1,9 +1,9 @@
 <?php
 
 
-namespace backndev\sixpayment;
+namespace SwissthemeSarl\sixpayment;
 
-use backndev\sixpayment\Payloads\Payloads;
+use SwissthemeSarl\sixpayment\Payloads\Payloads;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;

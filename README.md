@@ -1,4 +1,4 @@
-# backndev/sixPayment
+# SwissthemeSarl/sixPayment
 
 ### payload for direct payment
 

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace backndev\sixpayment\Payloads;
+namespace SwissthemeSarl\sixpayment\Payloads;
 
 class Payloads
 {

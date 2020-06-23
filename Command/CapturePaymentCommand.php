@@ -1,12 +1,12 @@
 <?php
 
 
-namespace backndev\sixpayment\Command;
+namespace SwissthemeSarl\sixpayment\Command;
 
 
 use App\Entity\Payment;
-use backndev\sixpayment\Mailer\ErrorMailer;
-use backndev\sixpayment\SixPayment;
+use SwissthemeSarl\sixpayment\Mailer\ErrorMailer;
+use SwissthemeSarl\sixpayment\SixPayment;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -58,7 +58,7 @@ class CapturePaymentCommand extends Command
                     $message = new \Swift_Message();
                     $message->setFrom('cron@parentsolo.ch');
                     $message->setSubject('payment');
-                    $message->setTo('damien@backndev.fr');
+                    $message->setTo('richardblat@gmail.com');
                     $message->setBody('
                         <h1>Payment</h1>
                         <p>payment to ' . $catch->getPaymentProfil()->getUser()->getEmail() . ' was done  at ' . $date->format('d-m-Y H:i:s') . '</p>
@@ -70,20 +70,20 @@ class CapturePaymentCommand extends Command
                 $message = new \Swift_Message();
                 $message->setFrom('cron@parentsolo.ch');
                 $message->setSubject('payment');
-                $message->setTo('damien@backndev.fr');
+                $message->setTo('richardblat@gmail.com');
                 $message->setBody('
                         <h1>Payment</h1>
                         <p>Nothing to catch at ' . $date->format('d-m-Y H:i:s') . '</p>
                     ', 'text/html');
                 $this->_mailer->send($message);
             }
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             $errorMail = new ErrorMailer($this->_mailer);
-            if (is_array($e)){
-                foreach ($e as $error){
+            if (is_array($e)) {
+                foreach ($e as $error) {
                     $errorMail->ErrorMail($error);
                 }
-            }else{
+            } else {
                 $errorMail->ErrorMail($e);
             }
         }
