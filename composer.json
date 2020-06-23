@@ -1,5 +1,5 @@
 {
-    "name": "backndev/sixpayment",
+    "name": "swisstheme-sarl/sixpayment",
     "description": "Six payment solution bundle",
     "type": "symfony-bundle",
     "license": "MIT",
